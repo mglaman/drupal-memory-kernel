@@ -1,0 +1,45 @@
+{
+    "name": "mglaman/drupal-memory-kernel",
+    "description": "Provides a DrupalKernel that uses an in-memory SQLite database",
+    "license": "GPL-2.0-or-later",
+    "type": "library",
+    "keywords": [
+        "drupal"
+    ],
+    "authors": [
+        {
+            "name": "Matt Glaman",
+            "email": "nmd.matt@gmail.com",
+            "homepage": "https://mglaman.dev"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "drupal/core": "^9.4 || ^10"
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
+        "ergebnis/composer-normalize": "^2.28",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan": "^1.8",
+        "phpunit/phpunit": "^9.5"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "mglaman\\DrupalMemoryKernel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "mglaman\\DrupalMemoryKernel\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "phpstan/extension-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
